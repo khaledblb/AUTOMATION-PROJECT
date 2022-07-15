@@ -26,7 +26,6 @@ def test_set_check_password(user_1):
 '''
 Integration testing testing api to register user
 '''
-
 @pytest.mark.django_db
 def test_register_user():
     client = APIClient()
