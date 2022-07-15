@@ -4,10 +4,10 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from rest_framework.test import APIClient
 from base.models import Product
-
 '''
 Unit tests -> checking user creation func
 '''
+
 @pytest.mark.django_db
 def test_user_create():
     User.objects.create_user('test','test@test.com','test')
@@ -22,8 +22,6 @@ def user_1(db):
 def test_set_check_password(user_1):
     user_1.set_password("new-password")
     assert user_1.check_password("new-password") is True
-
-
 
 '''
 Integration testing testing api to register user
