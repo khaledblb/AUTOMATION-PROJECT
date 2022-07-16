@@ -43,6 +43,11 @@ select * from auth_user;]]></console>
     <filter-actions connection-id="08cc238e-4c99-42f9-87c5-1f4f5f75338d" dataset="main.auth_user" active-filter-id="" />
     <filter-actions connection-id="08cc238e-4c99-42f9-87c5-1f4f5f75338d" dataset="main.auth_user_user_permissions" active-filter-id="" />
     <filter-actions connection-id="08cc238e-4c99-42f9-87c5-1f4f5f75338d" dataset="main.auth_group" active-filter-id="" />
+    <filter-actions connection-id="08cc238e-4c99-42f9-87c5-1f4f5f75338d" dataset="main.auth_permission" active-filter-id="df82b971-0baa-44a5-a403-54d75e210e8c">
+      <filter id="df82b971-0baa-44a5-a403-54d75e210e8c" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
