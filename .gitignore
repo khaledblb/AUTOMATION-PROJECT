@@ -3,7 +3,6 @@
 jenkins.war
 venv
 ../TESTING_DOCKER_JENKINS/chromedriver
-tests/E2E/conftest.py
 config
 drivers
 .pytest_cache
