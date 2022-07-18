@@ -24,5 +24,5 @@ def test_userlogin(driver):
     driver.find_element(By.CSS_SELECTOR, ".mt-3").click()
     actualName = driver.find_element(By.XPATH,'//*[@id="username"]')
     time.sleep(2)
-    assert actualName.text == "KHALED"
+    assert actualName.text == "TEST (UPDATED)"
   
