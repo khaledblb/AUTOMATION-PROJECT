@@ -15,10 +15,10 @@ def test_userlogin(driver):
     driver.find_element(By.ID, "email").click()
     time.sleep(1)
 
-    driver.find_element(By.ID, "email").send_keys("khaledblb@gmaill.com")
+    driver.find_element(By.ID, "email").send_keys("test@test.com")
     driver.find_element(By.ID, "password").click()
     time.sleep(1)
-    driver.find_element(By.ID, "password").send_keys("Aa123456")
+    driver.find_element(By.ID, "password").send_keys("123456")
     time.sleep(1)
 
     driver.find_element(By.CSS_SELECTOR, ".mt-3").click()
