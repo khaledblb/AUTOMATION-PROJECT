@@ -2,6 +2,7 @@ FROM python:3
 
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get install -y python3-pip
+RUN apt-get -y install python3-pip
 RUN pip3 install django==3.0
 
 ENV PYTHONPATH $PYTHONPATH:/code
