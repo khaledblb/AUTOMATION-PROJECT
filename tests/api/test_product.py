@@ -6,7 +6,7 @@ from base.models import Product
 from django.contrib.auth.models import User
 
 @pytest.mark.django_db
-def test_upload_product (admin_user):
+def test_upload_product ():
     pass
     # client = APIClient()
     #
