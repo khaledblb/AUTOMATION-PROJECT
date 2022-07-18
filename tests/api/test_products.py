@@ -1,5 +1,4 @@
 import pytest
-# @pytest.mark.django_db
 # def test_product_created():
 #Product.objects.create
 from rest_framework.reverse import reverse
@@ -14,6 +13,7 @@ def create_product():
         countInStock=0,
         category="Sample category",
         description=" ")
+
 
 @pytest.mark.django_db
 def test_product_creation():
