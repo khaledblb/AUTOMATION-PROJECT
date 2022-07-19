@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1','otakuhouse.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,15 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #local apps
     'base.apps.BaseConfig',
-    #3rd party apps 
+    #3rd party apps
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken'
 ]
 
 # Simple JWT 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-      
+
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
    

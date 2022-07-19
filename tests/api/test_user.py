@@ -1,27 +1,5 @@
 import pytest
-from django.contrib.auth.models import User
-from django.utils import timezone
 from rest_framework.test import APIClient
-from base.models import Product
-
-'''
-Unit tests -> checking user creation func
-'''
-
-@pytest.mark.django_db
-def test_user_create():
-    User.objects.create_user('test','test@test.com','test')
-    count = User.objects.all().count()
-    assert count == 1
-
-@pytest.fixture()
-def user_1(db):
-    return User.objects.create_user("test-user")
-
-@pytest.mark.django_db
-def test_set_check_password(user_1):
-    user_1.set_password("new-password")
-    assert user_1.check_password("new-password") is True
 
 '''
 Integration testing testing api to register user
@@ -39,17 +17,18 @@ def test_register_user():
 
     assert data["name"] == payload["name"]
 
-@pytest.mark.django_db
-def test_login_user():
-    client = APIClient()
-    payload = dict(
-        name="Khaled",
-        username="khaledblb@gmaill.com",
-        password="Aa123456"
-    )
-    registerResponse = client.post("api/users/register/", payload)
-    loginResponse = client.post("api/users/login/",payload)
-
-    # assert registerResponse.status_code == 200
-    assert registerResponse.status_code == 404
+# @pytest.mark.django_db
+# def test_login_user():
+#     client = APIClient()
+#     payload = dict(
+#         name="Khaled",
+#         username="khaledblb@gmaill.com",
+#         password="Aa123456"
+#     )
+#     registerResponse = client.post("api/users/register/", payload)
+#     loginResponse = client.post("api/users/login/",payload)
+#     data = registerResponse.data
+#
+#     assert loginResponse.status_code == 200
+#     # assert registerResponse.status_code == 404
 
