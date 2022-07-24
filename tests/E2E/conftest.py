@@ -9,7 +9,6 @@ import pytest
 
 @pytest.mark.parametrize("headless")
 @pytest.fixture()
-
 def driver():
     firefox_driver_binary = "./geckodriver"
     chrome_driver_binary = "./chromedriver"
@@ -34,7 +33,6 @@ def driver():
             "browserName" : "safari",
             "platformName" : "MAC"
         }
-
         driver = webdriver.Remote("http://localhost:4444",desired_capabilities=dc)
 
     elif browser_name == "chrome":
@@ -44,7 +42,6 @@ def driver():
         }
 
         driver = webdriver.Remote("http://192.168.1.189:4444", desired_capabilities=dc,options=chrome_options)
-
 
     yield driver
     driver.close()
