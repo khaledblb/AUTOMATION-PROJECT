@@ -1,28 +1,26 @@
 <h1 align=center>E-Commerce Website with Django + React & Redux</h1>
 <h2 align=center>Otaku House - Anime Merchandise and Cosplay Shop</h2>
 
-## ✨ [Live Link - Otaku House](https://otakuhouse.herokuapp.com/)
+## ✨ [Automation Testing System On Live Link](https://localhost:8000.com/)
 
-### How to Run 🏃‍♀️
-
+### How to Run on (Mac/Linux💻) /windows🏃‍♀️
 ```shell
 1 Clone This Repo
-2 cd backend
-3 python -m venv env
-4 .\env\Scripts\activate
-5 pip install -r requirements.txt 
-6 python manage.py runserver
+2 python3 -m venv env
+3 .\env\Scripts\activate
+4 pip install -r requirements.txt 
+5 python manage.py runserver
 
 ```
 
 ### 📷 Project Screenshots
 
-![screen_shot](screen_shot/ss1.png)
-![screen_shot](screen_shot/ss2.png)
-![screen_shot](screen_shot/ss3.png)
-![screen_shot](screen_shot/ss4.png)
-![screen_shot](screen_shot/ss5.png)
-![screen_shot](screen_shot/ss6.png)
+![screen_shot](screen_shot/screenShot1.png)
+![screen_shot](screen_shot/screenShot2.png)
+<!--![screen_shot](screen_shot/ss3.png)-->
+<!--![screen_shot](screen_shot/ss4.png)-->
+<!--![screen_shot](screen_shot/ss5.png)-->
+<!--![screen_shot](screen_shot/ss6.png)-->
 
 ### 🚀 Project Features
 
