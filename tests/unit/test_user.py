@@ -13,10 +13,6 @@ def test_user_create_by_DB_count():
     count = User.objects.all().count()
     assert count == 1
 
-@pytest.mark.django_db
-def test_set_check_password(user_1):
-    user_1.set_password("new-password")
-    assert user_1.check_password("new-password") is True
 
 @pytest.mark.django_db
 def test_create_user_by_id() :
