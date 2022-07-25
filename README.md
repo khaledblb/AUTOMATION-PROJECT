@@ -3,24 +3,31 @@
 
 ## ✨ [Automation Testing System On Live Link](https://localhost:8000.com/)
 
-### How to Run on (Mac/Linux💻) /windows🏃‍♀️
+### How to Run 🏃 on Mac - Linux 💻 / Windows 🖥 
 ```shell
 1 Clone This Repo
 2 python3 -m venv env
+3 .\env\Scripts\activate
+4 pip install -r requirements.txt
+5 python manage.py runserver 🖥 python3 manage.py runserver 💻 
+```
+### Run Tests &Build a version on Mac - Linux 💻 and Windows 🖥 
+```shell
+1 be sure Jenkins & Docker is running on
+2 
 3 .\env\Scripts\activate
 4 pip install -r requirements.txt 
 5 python manage.py runserver
 
 ```
-
 ### 📷 Project Screenshots
 
-![screen_shot](screen_shot/screenShot1.png)
-![screen_shot](screen_shot/screenShot2.png)
-<!--![screen_shot](screen_shot/ss3.png)-->
-<!--![screen_shot](screen_shot/ss4.png)-->
-<!--![screen_shot](screen_shot/ss5.png)-->
-<!--![screen_shot](screen_shot/ss6.png)-->
+![screenshots](screenshots/screenShot1.png)
+![screenshots](screenshots/screenShot2.png)
+<!--![screenshots](screenshots/ss3.png)-->
+<!--![screenshots](screenshots/ss4.png)-->
+<!--![screenshots](screenshots/ss5.png)-->
+<!--![screenshots](screenshots/ss6.png)-->
 
 ### 🚀 Project Features
 
