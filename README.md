@@ -14,34 +14,26 @@
 ### Run Tests &Build a version on Mac - Linux 💻 and Windows 🖥 
 ```shell
 1 be sure Jenkins & Docker is running on
-2 
-3 .\env\Scripts\activate
-4 pip install -r requirements.txt 
-5 python manage.py runserver
-
+2 open Jenkins local page -> create new pipeline project 
+3 copy & paste the groovy code from jenkins script file on the repo
+4 click on Build Now button from the project page 
 ```
 ### 📷 Project Screenshots
 
 ![screenshots](screenshots/screenShot1.png)
 ![screenshots](screenshots/screenShot2.png)
-<!--![screenshots](screenshots/ss3.png)-->
-<!--![screenshots](screenshots/ss4.png)-->
-<!--![screenshots](screenshots/ss5.png)-->
-<!--![screenshots](screenshots/ss6.png)-->
+![screenshots](screenshots/screenShot3.png)
+![screenshots](screenshots/screenShot4.png)
+
 
 ### 🚀 Project Features
 
-A completely customized eCommerce / shopping cart application using Django, REACT and REDUX with the following functionality:
+A completely automation testing eCommerce website, starting from unit test until opennign issue at Jira
+- Using 3 types of testing (Unit/API/E2E)
+- In case of changes on Github all scenario will executed
+- starting from Unit testing then api
+- then creating image and running container with docker
+- running end to end tests on that image
+- recording reports
+- in case of tests fails opening issue on Jira
 
-- Full featured shopping cart
-- Product reviews and Ratings
-- Top products carousel
-- Product pagination
-- Product search feature
-- User profile with orders
-- Admin product management
-- Admin user management
-- Admin Order details page
-- Mark orders as a delivered option
-- Checkout process (shipping, payment method, etc)
-- PayPal / credit card integration
