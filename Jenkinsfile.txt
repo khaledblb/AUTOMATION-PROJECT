@@ -1,0 +1,68 @@
+@Library("Testing-CI-CD-library") _
+
+pipeline {
+agent  any
+    environment {
+        JIRA_URL = "https://khaledblb.atlassian.net/"
+        JIRA_CREDENTIALS = credentials('jira-cred')
+    }
+
+    stages {
+        stage('pulling from github'){
+            steps {
+                git branch: 'main',
+                credentialsId: 'e84b2a9e-2b6f-4eab-887d-d02ef4868655',
+                url: 'https://github.com/khaledblb/AUTOMATION-PROJECT.git'
+            }
+        }
+
+        stage('Build python'){
+            steps {
+                sh '''
+                    source venv/bin/activate
+                    pip install -r requirements.txt
+                    python3 -m pip install pytest allure-python-commons allure-pytest pytest-html
+                '''
+            }
+        }
+
+        stage("Running Test& Report "){
+            steps {
+                sh '''
+                    source venv/bin/activate
+                    python3 -m pytest ./tests/unit ./tests/api --html=report.html --alluredir=allure-results
+                '''
+            }
+        }
+
+        stage('Create Image'){
+            steps {
+                sh '''
+                    python3 -m venv venv
+                    source venv/bin/activate
+                    docker image build -t ecommerce-project .
+                    docker run -p 8000:8000 -d ecommerce-project
+                    python3 -m pytest ./tests/E2E
+                '''
+            }
+        }
+    }
+
+    post{
+        failure {
+        // Create Jira issue and attach html report.
+        echo 'Build has failed opening jira issue!'
+        jiraCreateIssue(
+            key: "DEP",
+            summary: "Issue created from Jenkins",
+            description: "Tests failed here is the report: http://localhost:8080/job/ecommerce-django-react/allure/",
+            issueTypeName: "Bug"
+        )
+        jiraSendBuildInfo()
+      }
+      always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: ''])
+            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+            }
+    }
+}

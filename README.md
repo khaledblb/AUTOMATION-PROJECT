@@ -9,14 +9,16 @@
 2 python3 -m venv env
 3 .\env\Scripts\activate
 4 pip install -r requirements.txt
-5 python manage.py runserver 🖥 python3 manage.py runserver 💻 
+5 python manage.py runserver
 ```
 ### Run Tests &Build a version on Mac - Linux 💻 and Windows 🖥 
 ```shell
-1 be sure Jenkins & Docker is running on
-2 open Jenkins local page -> create new pipeline project 
-3 copy & paste the groovy code from jenkins script file on the repo
-4 click on Build Now button from the project page 
+1 be sure Jenkins, Docker and Selenium server is running on
+2 in terminal type: java -jar selenium-server-4.2.2.jar standalone
+3 open the docker app
+4 open Jenkins local page -> create new pipeline project 
+5 copy & paste the groovy code from jenkins script file on the repo
+6 click on Build Now button from the project page 
 ```
 ### 📷 Project Screenshots
 

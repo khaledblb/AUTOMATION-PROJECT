@@ -6,9 +6,9 @@ jenkins.war
 venv
 ../TESTING_DOCKER_JENKINS/chromedriver
 config
-drivers
+tests/E2E/drivers
 .pytest_cache
-geckodriver
-geckodriver.log
-selenium-server-4.2.2.jar
+tests/E2E/drivers/geckodriver
+tests/E2E/drivers/geckodriver.log
+tests/E2E/drivers/selenium-server-4.2.2.jar
 main.py

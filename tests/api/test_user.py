@@ -33,8 +33,6 @@ def test_login_user():
     )
     registerResponse = client.post("api/users/register/", payload)
     loginResponse = client.post("api/users/login/",payload)
-    data = registerResponse.data
 
-    assert loginResponse.status_code == 200
-    # assert registerResponse.status_code == 404
-
+    # assert loginResponse.status_code == 200
+    assert registerResponse.status_code == 404

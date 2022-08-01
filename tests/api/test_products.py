@@ -15,4 +15,3 @@ def test_api_create_product():
     response = client.post("/api/products/create/")
 
     assert response.status_code == 200
-

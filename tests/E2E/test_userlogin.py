@@ -25,4 +25,3 @@ def test_userlogin(driver):
     time.sleep(2)
 
     assert actualName.text == "TEST (UPDATED)"
-  
