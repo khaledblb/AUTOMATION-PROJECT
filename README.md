@@ -1,5 +1,7 @@
-<h1 align=center>E-Commerce Website with Django + React & Redux</h1>
-<h2 align=center>Otaku House - Anime Merchandise and Cosplay Shop</h2>
+<h1 align=center>Automation testing system
+ for
+</h1>
+<h2 align=center>Electric car E-Commerce Website with Django + React & Redux 
 
 ## ✨ [Automation Testing System On Live Link](https://localhost:8000.com/)
 
